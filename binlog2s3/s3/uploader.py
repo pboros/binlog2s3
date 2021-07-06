@@ -45,7 +45,7 @@ class S3Uploader(object):
         })
 
     def close_multipart_upload(self):
-        print("{dt} Finshing multipart upload for {filename}".format(
+        print("{dt} Finishing multipart upload for {filename}".format(
             dt=datetime.datetime.now(), filename=self.multipart_key
         ))
         self.s3_client.complete_multipart_upload(
